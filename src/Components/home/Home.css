@@ -92,3 +92,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+}

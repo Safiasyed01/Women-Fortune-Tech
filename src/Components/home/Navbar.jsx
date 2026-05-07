@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/WFT-logo_page-0001.png';
+import { Link } from "react-router-dom";
 import './Navbar.css';
 import { FaBars } from "react-icons/fa"
 import { useState } from 'react';
@@ -16,8 +17,8 @@ function Navbar() {
                 ☰
             </div>
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-                <li className={active === "Home" ? "active " : ""} onClick={()=>setActive("Home")}>Home</li>
-                <li className={active === "About Us" ? "active": ""} onClick={()=>setActive("About Us")}>About Us</li>
+                <li className={active === "Home" ? "active " : ""} onClick={()=>setActive("Home")}> <Link to="/">Home</Link></li>
+                <li className={active === "About Us" ? "active": ""} onClick={()=>setActive("About Us")}> <Link to="/about">About Us</Link></li>
                 <li className={active === "Services" ? "active": ""} onClick={()=>setActive("Services")}>Services</li>
                 <li className={active === "Team" ? "active": ""} onClick={()=>setActive("Team")}>Team</li>
                 <li className={active === "Contact" ? "active": ""} onClick={()=>setActive("Contact")}>Contact</li>
