@@ -1,19 +1,21 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
+
+
 .navbar {
-   top: 0;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   padding-bottom: 20px;
-    position: sticky;
   z-index: 1000;
   background-color: white;
-
 }
+
 .logo img{
     height: 150px;
     width: auto;
@@ -40,7 +42,10 @@ li:hover {
   transition: 0.3s;
 }
 
-
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+}
 .hamburger {
   display: none;
   color: white;
@@ -74,6 +79,116 @@ li:hover {
     
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+} */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 50px;
+
+  border-bottom: 1px solid #eee;
+}
+
+/* LOGO */
+.logo img {
+  height: 85px;
+  width: auto;
+  display: block;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  color: #C4614A;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #496f98;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ACTIVE LINK */
+.active {
+  border-bottom: 2px solid #C4614A;
+  padding-bottom: 4px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #C4614A;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 85px;
+    right: 20px;
+
+    width: 220px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    transform: translateX(130%);
+    transition: transform 0.3s ease;
   }
 
   .nav-links.open {

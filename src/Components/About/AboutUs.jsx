@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
 import Team from './Team'        // add this
-
+import Mission from './Mission'  // add this
 const AboutUs = () => {
   return (
     <section className="about">
@@ -19,6 +19,7 @@ const AboutUs = () => {
         </div>
       </div>
 
+      <Mission />                  {/* add this */}
       <Team />                   {/* add this */}
     </section>
   )
