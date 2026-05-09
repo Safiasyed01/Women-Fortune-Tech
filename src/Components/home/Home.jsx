@@ -9,7 +9,6 @@ const Home = () => {
           <p>Women Fortune Tech is Pakistan’s leading vernacular upskilling platform,
              dedicated to empowering women to unlock their potential in the digital world. </p> 
              </div> 
-             <button className='hero-btn'> Get Started </button>
               </section>
                ) 
             }

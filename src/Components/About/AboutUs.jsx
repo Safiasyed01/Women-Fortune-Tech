@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AboutUs.css'
 import Team from './Team'        // add this
 import Mission from './Mission'  // add this
 const AboutUs = () => {
+
+  const [tab, setTab] = useState('mission')
   return (
     <section className="about">
       <h2>About Us</h2>
@@ -18,9 +20,16 @@ const AboutUs = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
+            <div id="mission">
+        <Mission />
+      </div>
 
-      <Mission />                  {/* add this */}
-      <Team />                   {/* add this */}
+      <div id="team">
+        <Team />
+      </div>
+
+
+     
     </section>
   )
 }

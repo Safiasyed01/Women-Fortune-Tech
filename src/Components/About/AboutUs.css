@@ -40,3 +40,32 @@
   max-width: 800px;
   margin: auto;
 }
+.about-dd {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.dropdown a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+
+.dropdown a:hover {
+  background: #f3f3f3;
+  color: #C4614A;
+}
